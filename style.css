@@ -1,0 +1,953 @@
+@font-face{
+	font-family: "Marvin";
+	src: url("fonts/MarvinVisions-Bold.eot");
+	src: url("fonts/MarvinVisions-Bold.woff")format("woff");
+}
+
+@font-face{
+	font-family: 'BebasNeue';
+	src: url("fonts/bebas_neue/BebasNeue Book.otf");
+}
+
+@font-face{
+	font-family: 'BebasNeue Regular';
+	src: url("fonts/bebas_neue/BebasNeue Regular.otf");
+}
+
+@font-face{
+	font-family: 'BebasNeue Bold';
+	src: url("fonts/bebas_neue/BebasNeue Bold.otf");
+}
+
+button:focus {outline:0;}
+
+body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+.mobile{
+	display: none;
+	background-color: #666666;
+}
+
+.back{
+	color: white;
+	font-family: 'BebasNeue Regular';
+	text-decoration: none;
+	margin-left: 50px;
+	display: inline-block;
+}
+
+.back a{
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.back__icon{
+	width: 14%;
+	color:white;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+
+#section5{
+	background-color:rgb(51, 51, 51);
+	padding: 40px;
+}
+
+.footer{
+	background-color:rgb(44, 44, 45);
+
+}
+
+.footer__block{
+	display: inline-block;
+	float: left;
+}
+
+.footer__block .footer__title{
+	color:white;
+	font-weight: 600;
+	font-size: 40px;
+	letter-spacing: 2px;
+}
+
+.footer__exp{
+	list-style: none;
+	color: white;
+	font-weight: 200;
+	padding-left: 110px;
+}
+
+.footer__exp .company{
+	color:#2fb7b7;
+	font-weight: 300;
+}
+
+.footer__expitem{
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.footer-social{
+	color:white;
+	font-weight: 100;
+}
+
+.footer-social__title{
+	font-size: 15px;
+	color:white;
+	font-weight: 500;
+}
+
+.footer-social__email {
+	margin-bottom:0;
+
+}
+
+
+.footer-social__email a{
+	text-decoration: underline;
+	color:white;
+	
+}
+
+.footer-social a:visited{
+	text-decoration: underline;
+	color:white;
+
+}
+
+.footer-social__email a:visited{
+	text-decoration: underline;
+	color:white;
+
+}
+
+.footer-social__icon{
+	display: inline-block;
+	width: 6%;
+	margin-right: 15px;
+	
+}	
+
+.footer-social__icon img{
+	width: 100%;
+}
+
+.menu{
+	font-family: 'BebasNeue';
+	font-size: 14px;
+	color:#111111;
+	position: relative;
+	display: inline-block;
+	width: 57px;
+    text-align: center;
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+    border: 0.5px solid white;
+    padding: 10px;
+}
+
+.menu.is-active{
+	color:#111111 !important;
+	border-color: #111111;
+}
+
+.menu.black{
+	color:#111111;
+	width: 40px;
+	font-size: 14px;
+	border-color: #2fb7b7;
+}
+
+.menu.white{
+	color:white;
+}
+
+.logo{
+	font-family: 'BebasNeue';
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+}
+
+.logo.black{
+	color:black;
+	font-size: 15px;
+}
+
+.logo.white{
+	color:white;
+}
+
+.navbar{
+	width: 100%;
+	height: 50px;
+	float: left;
+	position: fixed;
+    z-index: 11111;
+}
+
+.navbar__menu{
+	width: 10%;
+	float: right;
+	
+}
+
+.navbar__menu-img{
+	width: 80%;
+	display: inline-block;
+}
+
+.navbar__menu-text{
+
+	display: inline-block;
+	font-size: 14px;
+}
+
+.navbar__logo{
+	padding-right: 50px;
+	
+	padding-top: 14px;
+	
+	
+	z-index: 111111;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 48px;
+    letter-spacing: 2px;
+}
+
+
+
+.navbar__logotext{
+
+	font-family: "Marvin";
+	font-size: 30px;
+	color:#464646;
+	
+	display: inline-block;
+}
+
+.hamburger{
+	display: none;
+	padding-right:0px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+	width: 28px;
+    height: 2px;
+    background-color: #707070;
+}
+
+.navbar__menu{
+	position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0;
+    float:left;
+    background-color: white;
+    overflow: hidden;
+}
+
+.navbar__list{
+    margin-top: 110px;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 27px;
+    color:#535353;
+    width: 60%;
+    display: inline-block;
+    float: left;
+    padding: 0;
+}
+
+.navbar__list-item{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-left: 100px;
+}
+.navbar__list-item a{
+	text-decoration: none;
+	color:#535353;
+}
+
+
+.navbar__contacts{
+	width: 40%;
+    display: inline-block;
+    float: left;
+    position: relative;
+    padding-top: 100px;
+    height: 100%;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+.navbar__contacts .navbar__title{
+	color:#2fb7b7;
+	font-size: 16px;
+	letter-spacing: 2px;
+	margin-left: 40px;
+}
+
+.navbar__contacts .navbar__email a{
+	margin-left: 40px;
+	font-size: 20px;
+	color:#535353;
+}
+
+.navbar__contacts .navbar__link a{
+	font-size: 20px;
+	color:#535353;
+}
+
+.navbar__social{
+	width: 100%;
+	padding-left: 40px;
+}
+
+.navbar__socialnetwork{
+	width: 10%;
+	float: left;
+	display: inline-block;
+	color:#535353;
+}
+
+.navbar__socialnetwork .navbar__icon{
+	width: 44%;
+}
+
+.navbar__socialnetwork .navbar__icon.navbar__icon--bigger{
+	width: 52%;
+}
+
+.hero{
+	
+	text-align: center;
+	position: left;
+	height: 100vh;
+	/*background: url(images/DRstrange.png) right no-repeat;
+	background-size: 1000px auto;
+	max-width:100%;
+	max-height:100%;*/
+	width: 100%;
+	background-image: linear-gradient(to top, #34acaf 0%, #00333a 100%);
+}
+
+.hero__hello{
+
+	text-align:center;
+	
+	display: inline-block;
+	margin-top: 0%;
+	width: 100%;
+	opacity: 0;
+	font-family: "Marvin";
+	font-size: 80px;
+	color:#3f7b80;
+	letter-spacing: 20px;
+	text-align: left;
+}
+
+.hero__intro{
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	color:white;
+	font-weight: 200;
+	letter-spacing: 2px;
+	line-height: 1.5;
+	text-align: left;
+	margin-left: 0;
+}
+
+
+.hero__img{
+	width: 95%;
+	position: relative;
+}
+
+.hero__description{
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	font-size: 19px;
+	font-weight: 600;
+	opacity: 0;
+}
+
+.hero-hello__dot{
+	font-family: 'Lato', sans-serif;
+	font-weight: 800;
+	font-size: 157px;
+	display: inline-block;
+	color:#2fb7b7;
+}
+
+.hero .hero__name{
+	text-align: left;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.hero .hero__line{
+	width: 15%;
+	height: 1px;
+	background-color: white;
+	float: left;
+	margin-bottom: 20px;
+	display: block;
+}
+
+.scroll-point{
+	width: 100%;
+    position: absolute;
+   	bottom:0;
+   	opacity: 0;
+}
+
+.scroll-point__text{
+	text-align: center;
+    font-size: 13px;
+    margin-bottom: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    color:#e1e1e1;
+}
+
+.scroll-point__line{
+	height: 40px;
+    width: 1px;
+    background-color: white;
+    
+    margin: 0 auto;
+}
+
+.project{
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	opacity: 1;
+  	transition: all 0.5s ease-out;
+}
+
+.project.fade-in {
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+.project .project__title{
+	font-size: 64px;
+	font-weight: 900;
+	color:#535353;
+	line-height: 1;
+	padding-left: 110px;
+}
+
+.project .project__block{
+	padding-top: 0px;
+}
+.project__countdown{
+	margin-bottom: 70px;
+	margin-left: 40px;
+}
+
+.project__countdown .number{
+	display: inline-block;
+	float: left;
+	font-size: 10px;
+	font-weight: 600;
+	color:#737373;
+	position: relative;
+    top: -12px;
+
+}
+
+.project__countdown .horizontal-line{
+	display: inline-block;
+	float: left;
+	width: 150px;
+	height: 1px;
+	background-color: #737373;
+	margin-left: 14px;
+	margin-right: 14px;
+    margin-top: 9px;
+}
+
+.project__countdown .title{
+	display: inline-block;
+	float: left;
+	color:#737373;
+	font-weight: 500;
+}
+
+.project__description{
+	width: 80%;
+    margin-top: 6%;
+    padding-left: 110px;
+    font-weight: 300;
+	font-size: 20px;
+    color: #969696;
+}
+
+.project__line{
+	width: 35%;
+    height: 1px;
+    background-color: #797979;
+    margin-left: 110px;
+    margin-top: 35px;
+}
+
+.project__image{
+	position: relative;
+    top: -54px;
+
+}
+
+.project__image img{
+	width:50%;
+}
+
+.project__showmore{
+	margin-top: 40px;
+	margin-left: 110px;
+}
+
+.number--big{
+	font-size: 25px;;
+}
+
+.btn{
+	background-color: white;
+	border:2px solid #2fb7b7;
+	border-radius: 27px;
+	padding: 10px;
+	width: 30%;
+	color:#2fb7b7;
+	font-weight: 500;
+}
+
+.btn a{
+	text-decoration:none;
+	color:#2fb7b7;
+}
+
+.btn:hover{
+	background-color: #2fb7b7;
+	color:white;
+	background-position:left right;
+	transition: all 1s ease;
+}
+
+
+.btn:hover a{
+	color:white;
+}
+.about{
+	
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(231, 236, 236, 0.5);
+}
+
+
+.about__block{
+	padding: 100px;
+}
+
+.about__photo{
+	width:80%;
+	display: inline-block;
+    float: left;
+}
+
+.about__photo img{
+	width: 90%;
+}
+
+.about__title{
+	font-size: 18px;
+	font-weight: 600;
+	color:#616161;
+}
+
+.about__description{
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+.about__list{
+	list-style: none;
+	margin-left: 0;
+    padding-left: 0;
+}
+
+.about__list li{
+	margin-top: 6px;
+	margin-bottom: 6px;
+	font-weight: 300;
+	list-style-type: none;
+	text-indent: -15px;
+}
+
+.about__list li:before{
+	content: "-";
+	margin-right: 10px;
+	text-indent: -15px;
+}
+
+
+/***********PROJECT******************/
+
+.menu{
+	color: white;
+}
+
+.intro{
+	background-color: #013f71;
+	position: relative;
+}
+
+.project1.intro__img{
+	background-image: url('images/Logo-Maynooth-cover.png');
+	background-size: cover;
+	background-position: 100%;
+	height: 100vh;
+	opacity: 0.2;
+	filter: blur(4px);
+}
+
+.project2.intro__img{
+	background-image: url('images/roarBikes-cover.png');
+	background-size: cover;
+	background-position: 100%;
+	height: 100vh;
+	opacity: 0.5;
+	filter: blur(4px);
+}
+
+.project3.intro__img{
+	background-image: url('images/pastelaria/capa-homepage.png');
+	background-size: cover;
+	background-position: 100%;
+	height: 100vh;
+	opacity: 0.2;
+	filter: blur(4px);
+}
+
+.project2.intro{
+	background-color: rgb(0, 146, 167);
+}
+
+
+/*
+.project3.intro__img{
+	background-image: url('images/inspector/abstract.png');
+	background-size: cover;
+	background-position: 100%;
+	height: 100vh;
+	opacity: 0.5;
+	filter: blur(4px);
+}
+
+.project3.intro{
+	background-color: #009688e6;
+}
+*/
+.project4.intro__img{
+	background-image: url('images/Sindicato/happyfamily.jpg');
+	background-size: cover;
+	background-position: 100%;
+	height: 100vh;
+	opacity: 0.5;
+	filter: blur(4px);
+}
+
+.project4.intro{
+	background-color: #005a6d;
+}
+
+.intro__title{
+	font-size: 60px;
+	font-weight: 900;
+	color:white;
+	line-height: 1;
+	position: absolute;
+    width: 48%;
+    top: 130px;
+    left: 50px;
+}
+
+.intro__line{
+	margin: calc(11px + 1.3vw) 0 calc(7px + .9vw);
+    width: 6.77vw;
+    height: 4px;
+	position: absolute;
+	top:210px;
+	left: 40px;
+	background-color: white;
+}
+
+.intro__description{
+	color:white;
+	font-weight: 300;
+	position: absolute;
+	top:40%;
+	left: 50px;
+	width: 50%;
+	font-size: 18px;
+	line-height: 1.5;
+	letter-spacing: 1px;
+}
+
+.intro__info{
+	position: absolute;
+	top:44%;
+	color: white;
+	right:300px;
+	letter-spacing: 0px;
+  
+}
+
+.intro__info.space{
+	margin-left: 160px;
+}
+
+.intro__info-block{
+	display: inline-block;
+	float: left;
+	margin-left: 25px;
+}
+
+.intro__year{
+  	font-size: 22px;
+    font-family: 'BebasNeue Regular';
+}
+
+.intro__data{
+	font-weight: 200;
+	letter-spacing: 2px;
+	margin-top: 20px;
+	font-family: 'Lato', sans-serif;
+}
+
+.intro__role{
+	font-size: 22px;
+    font-family: 'BebasNeue Regular';
+	
+}
+
+
+.vertical-line{
+	width: 1px;
+	height: 80px;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	left:50%;
+}
+
+.project-block.top-line{
+	border-top: 1px solid #eaeaea;
+}
+
+.project-block .project-block__info{
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.project-block--blue{
+	background-color: #f5f5f7;
+}
+
+.project-block__info{
+	text-align:center;
+}
+
+.project-block__img{
+	
+	margin-bottom: 20px;
+	text-align:center;
+	width: 100%;
+}
+
+.project-block__title{
+	font-size: 26px;
+	font-family: 'BebasNeue Regular';
+}
+
+.project-block__title.align-left{
+	text-align: left;
+}
+
+.project-block .align-center{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+}
+
+.project-block .row.align-center{
+	text-align: center;
+}
+
+.project-block__text{
+	font-weight: 300;
+}
+
+.project-block__text.align-left{
+	text-align: left;
+}
+
+.project-block__text.align-center{
+	width: 58%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.project-block.full-width{
+	background-color: #f5f6f7;
+}
+
+.project-block .image-back{
+	width: 100%;
+	height: 500px;
+	background-image: url('images/Pestana/woman-mackbook.png');
+	background-size: 100%;
+	background-position: 100%;
+}
+
+.other{
+	border-top: 1px solid #eaeaea;
+}
+.other__next-project{
+	margin-top: 30px;
+	margin-bottom: 40px;
+	display: inline-block;
+	float: right;
+	margin-right: 50px;
+}
+
+.other__previous-project{
+	margin-top: 30px;
+	margin-bottom: 40px;
+	display: inline-block;
+	float: left;
+	margin-left: 50px;
+}
+
+.other__previous-project a{
+	text-decoration: none;
+	color:#666666;
+	letter-spacing: 1px;
+	margin-top: 20px;
+	margin-left: 10px;
+	font-size: 18px;
+	font-family: 'BebasNeue Regular';
+}
+
+.other__next-project a{
+	text-decoration: none;
+	color:#666666;
+	letter-spacing: 1px;
+	margin-top: 20px;
+	margin-right: 10px;
+	font-size: 18px;
+	font-family: 'BebasNeue Regular';
+}
+
+.other .next__icon{
+	width: 16px;
+
+}
+
+@media (max-width:801px)  {
+	.mobile{
+		display: block;
+		position: absolute;
+		height: 100vh;
+		width: 100%;
+		color:black;
+		font-weight: 300;
+		font-size: 20px;
+		padding: 20px;
+		background-color: white;
+	}
+	
+	.desktop{
+		display: none;
+	}
+}
+
+
+.letraNormal {
+	font-size: 16px;
+}
+
+
+#topBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 75px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: gray; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  
+}
+
+#topBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
